@@ -1,0 +1,33 @@
+let nfts = [];
+
+function mintNFT(_name, _Uid, _Branch, _CGPA) {
+    const nft = {
+        Name: _name,
+        UID: _Uid,
+        Branch: _Branch,
+        CGPA: _CGPA
+    };
+    nfts.push(nft);
+}
+
+function listNFTs() {
+    for (let i = 0; i < nfts.length; i++) {
+        console.log("Name: " + nfts[i].Name);
+        console.log("UID: " + nfts[i].UID);
+        console.log("Branch: " + nfts[i].Branch);
+        console.log("CGPA: " + nfts[i].CGPA);
+        console.log("----------");
+    }
+}
+
+function getTotalSupply() {
+    return nfts.length;
+}
+
+mintNFT("Rajeev Singh", "22BCS14717", "CSE", "8.57");
+mintNFT("Pratap Aditya Singh", "22BCS16464", "CSE", "7.54");
+mintNFT("Sajanpreet Singh", "22BCS16496", "CSE", "7.8");
+
+listNFTs();
+
+console.log("Total Supply: " + getTotalSupply());
